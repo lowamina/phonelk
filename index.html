@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phone.lk Kaduwela | Mobile Phones & Accessories at Kaduwela Bus Stand</title>
+<meta name="description" content="Phone.lk Kaduwela: mobile phones and accessories at Shop G4, Kaduwela Main Bus Stand. Open every day 8:00 AM to 7:30 PM.">
+<style>
+  :root{
+    --ink:#0d1117;
+    --ink-2:#161c26;
+    --line:#263042;
+    --text:#e8edf5;
+    --muted:#9aa6b8;
+    --accent:#ff6a3d;
+    --accent-2:#ffb547;
+    --wa:#25d366;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,"Noto Sans Sinhala",sans-serif;background:var(--ink);color:var(--text);line-height:1.6}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+
+  /* demo ribbon */
+  .demo{background:var(--accent-2);color:#1a1200;text-align:center;font-size:.82rem;font-weight:600;padding:7px 12px}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:20;background:rgba(13,17,23,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-weight:800;font-size:1.35rem;letter-spacing:-.5px}
+  .logo span{color:var(--accent)}
+  .links{display:flex;gap:26px;font-size:.95rem;color:var(--muted)}
+  .links a:hover{color:var(--text)}
+  .nav-call{background:var(--accent);color:#fff;padding:9px 16px;border-radius:999px;font-weight:600;font-size:.9rem}
+  @media(max-width:760px){.links{display:none}}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;padding:90px 0 80px}
+  .hero::before{content:"";position:absolute;width:620px;height:620px;right:-180px;top:-200px;background:radial-gradient(circle,rgba(255,106,61,.35),transparent 65%);pointer-events:none}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center;position:relative}
+  .tag{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--ink-2);padding:6px 14px;border-radius:999px;font-size:.85rem;color:var(--muted)}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--wa);box-shadow:0 0 0 4px rgba(37,211,102,.18)}
+  h1{font-size:clamp(2.3rem,5.4vw,4rem);line-height:1.05;letter-spacing:-1.5px;margin:20px 0 18px;font-weight:800}
+  h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lead{color:var(--muted);font-size:1.12rem;max-width:520px}
+  .si{display:block;margin-top:8px;color:var(--text);opacity:.75;font-size:1rem}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 22px;border-radius:14px;font-weight:700;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-wa{background:var(--wa);color:#062b14}
+  .btn-ghost{border:1px solid var(--line);background:var(--ink-2)}
+  .btn svg{width:18px;height:18px}
+
+  /* phone mockup */
+  .mock{justify-self:center;width:260px;height:520px;border-radius:44px;background:linear-gradient(160deg,#222b3a,#0f141c);border:2px solid #2f3a4e;padding:14px;box-shadow:0 40px 80px rgba(0,0,0,.5),0 0 0 8px #121821;position:relative;transform:rotate(6deg)}
+  .mock .screen{height:100%;border-radius:32px;background:linear-gradient(170deg,var(--accent) 0%,#c2356a 55%,#3b2a8f 100%);display:flex;flex-direction:column;justify-content:space-between;padding:46px 22px 26px}
+  .mock .notch{position:absolute;top:24px;left:50%;transform:translateX(-50%);width:84px;height:22px;background:#0b0f15;border-radius:20px}
+  .mock .time{font-size:3.4rem;font-weight:300;line-height:1}
+  .mock .date{opacity:.85;font-size:.9rem}
+  .mock .chip{background:rgba(255,255,255,.18);backdrop-filter:blur(6px);border-radius:16px;padding:12px 14px;font-size:.85rem}
+  .mock .chip b{display:block;font-size:.95rem}
+  @media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.mock{display:none}.hero{padding:60px 0}}
+
+  /* strip */
+  .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink-2)}
+  .strip .wrap{display:grid;grid-template-columns:repeat(3,1fr);text-align:center}
+  .strip div div{padding:22px 10px}
+  .strip b{display:block;font-size:1.25rem}
+  .strip span{color:var(--muted);font-size:.88rem}
+  .strip .wrap>div+div{border-left:1px solid var(--line)}
+  @media(max-width:600px){.strip .wrap{grid-template-columns:1fr}.strip .wrap>div+div{border-left:0;border-top:1px solid var(--line)}}
+
+  /* sections */
+  section{padding:90px 0}
+  .eyebrow{color:var(--accent);font-weight:700;font-size:.82rem;letter-spacing:2px;text-transform:uppercase}
+  h2{font-size:clamp(1.8rem,3.6vw,2.6rem);letter-spacing:-.8px;line-height:1.15;margin:10px 0 14px}
+  .sub{color:var(--muted);max-width:560px}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:44px}
+  .card{background:var(--ink-2);border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:border-color .2s,transform .2s}
+  .card:hover{border-color:var(--accent);transform:translateY(-4px)}
+  .icon{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;background:rgba(255,106,61,.12);color:var(--accent);margin-bottom:18px}
+  .icon svg{width:26px;height:26px}
+  .card h3{font-size:1.15rem;margin-bottom:6px}
+  .card p{color:var(--muted);font-size:.95rem}
+
+  /* brands */
+  .brands{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .brands span{border:1px solid var(--line);padding:10px 18px;border-radius:999px;color:var(--muted);font-weight:600}
+
+  /* visit */
+  .visit{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;margin-top:44px}
+  .info{background:var(--ink-2);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+  .row{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .row:last-child{border-bottom:0}
+  .row .icon{margin:0;flex:0 0 44px;width:44px;height:44px}
+  .row small{color:var(--muted);display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:1px}
+  .row b{font-size:1.05rem}
+  .open-now{display:inline-block;margin-top:4px;font-size:.82rem;font-weight:700;padding:2px 10px;border-radius:999px}
+  .open-now.on{background:rgba(37,211,102,.15);color:var(--wa)}
+  .open-now.off{background:rgba(255,106,61,.15);color:var(--accent)}
+  .map{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);min-height:380px}
+  .map iframe{width:100%;height:100%;min-height:380px;border:0;filter:grayscale(.2) contrast(1.05)}
+  .maplink{position:relative;display:block}
+  .maplink svg{display:block;width:100%;height:100%;min-height:380px}
+  .mapcap{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(13,17,23,.9);border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-size:.88rem;color:var(--muted)}
+  .mapcap b{display:block;color:var(--text);font-size:1rem}
+  .maplink:hover .mapcap{border-color:var(--accent)}
+  @media(max-width:860px){.visit{grid-template-columns:1fr}}
+
+  /* cta */
+  .cta{margin:0 22px 90px;border-radius:28px;padding:60px 30px;text-align:center;background:linear-gradient(120deg,var(--accent),#c2356a);max-width:1076px;margin-left:auto;margin-right:auto}
+  .cta h2{color:#fff}
+  .cta p{color:rgba(255,255,255,.88);margin-bottom:26px}
+  .cta .btn-ghost{background:rgba(0,0,0,.2);border-color:rgba(255,255,255,.35);color:#fff}
+
+  footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.88rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  /* floating whatsapp */
+  .fab{position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 30px rgba(37,211,102,.4);z-index:30}
+  .fab svg{width:30px;height:30px;color:#062b14}
+</style>
+</head>
+<body>
+
+<div class="demo">Demo website concept prepared by Code.lowa for Phone.lk Kaduwela. Not yet the shop's official site.</div>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo">Phone<span>.lk</span></a>
+    <div class="links">
+      <a href="#shop">What we sell</a>
+      <a href="#brands">Brands</a>
+      <a href="#visit">Visit us</a>
+    </div>
+    <a class="nav-call" href="tel:+94766707011">Call now</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="tag"><span class="dot"></span>Open daily, 8:00 AM to 7:30 PM</span>
+      <h1>Your next phone is <em>right at the bus stand.</em></h1>
+      <p class="lead">Phones, accessories and friendly advice at Shop G4, Kaduwela Main Bus Stand. Drop in on your way to work or campus.
+        <span class="si">කඩුවෙල ප්‍රධාන බස් නැවතුම්පළ, කඩය G4</span></p>
+      <div class="btns">
+        <a class="btn btn-wa" href="https://wa.me/94766707011?text=Hi%20Phone.lk%2C%20I%27d%20like%20to%20check%20a%20phone%20price" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+          WhatsApp us</a>
+        <a class="btn btn-primary" href="tel:+94766707011">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          076 670 7011</a>
+        <a class="btn btn-ghost" href="#visit">Find the shop</a>
+      </div>
+    </div>
+    <div class="mock" aria-hidden="true">
+      <div class="notch"></div>
+      <div class="screen">
+        <div><div class="time" id="mockTime">9:41</div><div class="date" id="mockDate">Kaduwela</div></div>
+        <div class="chip"><b>Phone.lk</b>Shop G4 · Main Bus Stand</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="wrap">
+    <div><div><b>7 days</b><span>a week</span></div></div>
+    <div><div><b>8:00 – 7:30</b><span>every day</span></div></div>
+    <div><div><b>Shop G4</b><span>Kaduwela Main Bus Stand</span></div></div>
+  </div>
+</div>
+
+<section id="shop">
+  <div class="wrap">
+    <span class="eyebrow">What we sell</span>
+    <h2>Everything for your phone, in one stop.</h2>
+    <p class="sub">Come in or message us to check what's in stock today.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div>
+        <h3>Smartphones</h3>
+        <p>New and pre-owned phones for every budget. Ask us for today's prices.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><rect x="2" y="14" width="5" height="7" rx="2"/><rect x="17" y="14" width="5" height="7" rx="2"/></svg></div>
+        <h3>Audio</h3>
+        <p>Earphones, headsets and Bluetooth speakers for the bus ride home.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="16" height="10" rx="2"/><path d="M22 11v2M6 10v4M10 10v4"/></svg></div>
+        <h3>Chargers & power banks</h3>
+        <p>Fast chargers, cables for every port and power banks to keep you going.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Covers & protection</h3>
+        <p>Back covers and screen protectors, fitted while you wait.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="brands" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow">Brands</span>
+    <h2>Popular brands, ask for yours.</h2>
+    <div class="brands">
+      <span>Samsung</span><span>Apple</span><span>Xiaomi / Redmi</span><span>Oppo</span><span>Vivo</span><span>Honor</span><span>Nokia</span>
+    </div>
+  </div>
+</section>
+
+<section id="visit" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow">Visit us</span>
+    <h2>Easy to find, right at the bus stand.</h2>
+    <div class="visit">
+      <div class="info">
+        <div class="row">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <div><small>Address</small><b>Shop G4, Main Bus Stand,<br>Kaduwela, Sri Lanka</b></div>
+        </div>
+        <div class="row">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div><small>Opening hours</small><b>Monday – Sunday<br>8:00 AM – 7:30 PM</b><br><span class="open-now" id="openNow">Checking…</span></div>
+        </div>
+        <div class="row">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></div>
+          <div><small>Phone / WhatsApp</small><b><a href="tel:+94766707011">076 670 7011</a></b></div>
+        </div>
+        <div class="btns" style="margin-top:18px">
+          <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Phone.lk%20Kaduwela&query_place_id=ChIJgeNmGgBX4joRMgXy9-R8Hm0" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+      <a class="map maplink" href="https://www.google.com/maps/search/?api=1&query=Phone.lk%20Kaduwela&query_place_id=ChIJgeNmGgBX4joRMgXy9-R8Hm0" target="_blank" rel="noopener">
+        <svg viewBox="0 0 400 380" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="400" height="380" fill="#121821"/>
+          <g stroke="#263042" stroke-width="1">
+            <path d="M0 60h400M0 140h400M0 230h400M0 310h400M70 0v380M170 0v380M260 0v380M340 0v380"/>
+          </g>
+          <path d="M-10 200 C 90 180, 160 210, 230 190 S 360 150, 420 170" stroke="#2f3a4e" stroke-width="18" fill="none"/>
+          <path d="M-10 200 C 90 180, 160 210, 230 190 S 360 150, 420 170" stroke="#ffb547" stroke-width="2" stroke-dasharray="8 8" fill="none" opacity=".6"/>
+          <path d="M200 -10 C 210 90, 190 150, 215 380" stroke="#2f3a4e" stroke-width="12" fill="none"/>
+          <text x="20" y="225" fill="#9aa6b8" font-size="12" font-family="sans-serif">Avissawella Rd</text>
+          <text x="225" y="40" fill="#9aa6b8" font-size="12" font-family="sans-serif">New Kandy Rd</text>
+          <circle cx="210" cy="192" r="34" fill="rgba(255,106,61,.18)"/>
+          <path d="M210 150c-14 0-25 11-25 25 0 19 25 42 25 42s25-23 25-42c0-14-11-25-25-25z" fill="#ff6a3d"/>
+          <circle cx="210" cy="175" r="8" fill="#fff"/>
+        </svg>
+        <span class="mapcap"><b>Phone.lk · Shop G4</b>Kaduwela Main Bus Stand · Tap to open in Google Maps</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <h2>Looking for a phone today?</h2>
+  <p>Send us the model you want and we'll reply with the price and stock.</p>
+  <div class="btns" style="justify-content:center">
+    <a class="btn btn-wa" href="https://wa.me/94766707011" target="_blank" rel="noopener">Message on WhatsApp</a>
+    <a class="btn btn-ghost" href="tel:+94766707011">Call 076 670 7011</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Phone.lk Kaduwela · Shop G4, Main Bus Stand, Kaduwela</span>
+    <span>Website by Code.lowa</span>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/94766707011" target="_blank" rel="noopener" aria-label="WhatsApp Phone.lk">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+</a>
+
+<script>
+  // Open/closed badge using Sri Lanka time (UTC+5:30)
+  (function(){
+    var now = new Date();
+    var sl = new Date(now.getTime() + (now.getTimezoneOffset() + 330) * 60000);
+    var mins = sl.getHours() * 60 + sl.getMinutes();
+    var open = mins >= 8 * 60 && mins < 19 * 60 + 30;
+    var el = document.getElementById('openNow');
+    el.textContent = open ? 'Open now' : 'Closed now, opens 8:00 AM';
+    el.className = 'open-now ' + (open ? 'on' : 'off');
+    var h = sl.getHours() % 12 || 12, m = String(sl.getMinutes()).padStart(2, '0');
+    document.getElementById('mockTime').textContent = h + ':' + m;
+    document.getElementById('mockDate').textContent = sl.toLocaleDateString('en-GB', {weekday:'long', day:'numeric', month:'long'});
+    document.getElementById('yr').textContent = sl.getFullYear();
+  })();
+</script>
+</body>
+</html>
